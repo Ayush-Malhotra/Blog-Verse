@@ -129,7 +129,7 @@ class Service{
         //console.log(fileID);
         try {
             console.log(this.bucket.getFilePreview(conf.appwriteBucketId,fileID,));
-            return this.bucket.getFilePreview(conf.appwriteBucketId,fileID).toString().concat("&mode=admin");
+            return this.bucket.getFileView(conf.appwriteBucketId,fileID);
         } catch (error) {
             console.log("Appwrite Service :: getFile error occured :: ", error);
             return false;

@@ -35,11 +35,14 @@ export default function Post() {
         <div className="py-8">
             <Container>
                 <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
+                    <div className="flex">
+                    <div className="w-[50%] flex justify-center mb-4">
                     <img
                         src={service.getFilePreview(post.featuredImage)}
                         alt={post.title}
                         className="rounded-xl"
                     />
+                    </div>
 
                     {isAuthor && (
                         <div className="absolute right-6 top-6">
@@ -53,13 +56,17 @@ export default function Post() {
                             </Button>
                         </div>
                     )}
-                </div>
-                <div className="w-full mb-6">
-                    <h1 className="text-2xl font-bold">{post.title}</h1>
-                </div>
-                <div className="browser-css">
-                    {parse(post.content)}
+                    <div className="w-[50%] pl-8">
+                    <div className="mb-6">
+                        <h1 className="text-4xl font-bold text-left">{post.title}</h1>
                     </div>
+                    <div className="text-xl text-left">
+                        {parse(post.content)}
+                    </div>
+                </div>
+                </div>
+                
+            </div>
             </Container>
         </div>
     ) : null;

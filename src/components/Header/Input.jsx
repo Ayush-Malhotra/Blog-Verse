@@ -11,11 +11,11 @@ let Input = forwardRef(function Input({
 
     const id = useId();
     return (
-        <div className='w-full'>
+        <div className='w-full mb-3'>
             {
                 label && (
                 <label 
-                    className='inline-block mb-1 pl-1 font-bold'
+                    className='block mb-1 font-bold text-left'
                     htmlFor={id}
                 >{label}</label>)
             }
