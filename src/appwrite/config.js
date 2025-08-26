@@ -126,9 +126,7 @@ class Service{
 
     getFilePreview(fileID)
     {
-        //console.log(fileID);
         try {
-            console.log(this.bucket.getFilePreview(conf.appwriteBucketId,fileID,));
             return this.bucket.getFileView(conf.appwriteBucketId,fileID);
         } catch (error) {
             console.log("Appwrite Service :: getFile error occured :: ", error);
